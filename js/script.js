@@ -121,3 +121,15 @@ document.addEventListener('DOMContentLoaded', function() {
         navInit();// запускаем функцию при ресайзе страницы
     });
 });
+
+var audio = new Audio("./assets/Icytwat.mp3");
+
+function playSong() {
+if (audio.currentTime > 0 && !audio.paused) {
+return;
+}
+
+audio.play();
+}
+
+window.addEventListener('scroll', playSong);
